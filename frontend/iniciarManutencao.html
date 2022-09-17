@@ -96,7 +96,48 @@
             </div>
           </div>
         </div>
-        <main></main>
+        <main>
+          <div class="iniciarManutencao">
+            <div class="mb-3 inputMsn" id="inputMsn">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Insira o MSN do Avião</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Ex: 30020B.745" />
+            </div>
+            <div id="formIniciarMan">
+              <form>
+                <div class="mb-3">
+                  <p>MSN: XXXXXXXXXX</p>
+                  <p>Modelo: XXXXXXXX</p>
+                  <label for="addHorasdeVoo" class="form-label"
+                    >Adicionar horas de vôo</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="addHorasdeVoo" />
+                </div>
+
+                <div class="mb-3">
+                  <label for="addHangar" class="form-label">Hangar</label>
+                  <input type="text" class="form-control" id="addHangar" />
+                </div>
+                <div class="buttons">
+                  <button type="submit" class="btn btn-outline-primary">
+                    Cancelar
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Confirmar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
 

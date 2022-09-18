@@ -5,3 +5,23 @@
 form {
   width: 30%;
 }
+
+.card{
+  width: 30%;
+  margin-top: 20px;
+}
+
+#visualizarButton{
+  margin-top: 10px;
+}
+#ncm{
+  margin-top: 10px;
+}
+#ncm img{
+  margin-right: 5px;
+}
+
+#completeButton{
+  margin-top: 10px;
+  margin-left: 61%;
+}

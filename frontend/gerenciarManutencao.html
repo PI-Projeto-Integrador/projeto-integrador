@@ -10,7 +10,7 @@
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous" />
-    <title>ACME Maintanance</title>
+    <title>ACME Manutençōes</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -24,7 +24,7 @@
               id="software-name"
               href="index.html"
               class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-              <span class="fs-5 d-none d-sm-inline">ACME Maintanance</span>
+              <span class="fs-5 d-none d-sm-inline">ACME Manutençōes</span>
             </a>
             <ul
               class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
@@ -97,18 +97,49 @@
           </div>
         </div>
         <main>
-          <div class="card" style="width: 18rem">
+          <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <h5 class="card-title">Número da Manutenção</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Modelo do Avião</h6>
+              <p id="ncm"><img
+              src="./public/img/plane.svg"
+              width="30"
+              height="30"
+              class="rounded-circle" /> NCM do Avião</p>
+              <h6 class="card-subtitle mb-2 text">Data de Criação: xx/xx/xx xx:xx</h6>
+              <h6 class="card-subtitle mb-2 text">Data Limite: xx/xx/xx</h6>
+              <div>
+              <button id="visualizarButton" type="button" href="manutencaoGerente.html" class="btn btn-outline-primary">Visualizar</button>
+              <button class="btn" id="completeButton" ><img
+                src="./public/img/task.svg"
+                width="25"
+                height="25"
+                class="rounded-circle" /></button>
+              </div>
             </div>
           </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Número da Manutenção</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Modelo do Avião</h6>
+              <p id="ncm"><img
+              src="./public/img/plane.svg"
+              width="30"
+              height="30"
+              class="rounded-circle" /> NCM do Avião</p>
+              <h6 class="card-subtitle mb-2 text">Data de Criação: xx/xx/xx xx:xx</h6>
+              <h6 class="card-subtitle mb-2 text">Data Limite: xx/xx/xx</h6>
+              <div>
+              <button id="visualizarButton" type="button" href="manutencaoGerente.html" class="btn btn-outline-primary">Visualizar</button>
+              <button class="btn" id="completeButton" ><img
+                src="./public/img/task.svg"
+                width="25"
+                height="25"
+                class="rounded-circle" /></button>
+              </div>
+            </div>
+          </div>
+
         </main>
       </div>
     </div>

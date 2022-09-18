@@ -54,3 +54,13 @@
   margin: auto;
   margin-bottom: 15px;
 }
+
+#formLogin {
+  width: 30%;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: 2px solid #adb5bd;
+  padding: 20px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+}

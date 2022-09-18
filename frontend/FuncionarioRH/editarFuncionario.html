@@ -31,31 +31,11 @@
               id="menu">
               <li class="nav-item">
                 <a
-                  href="iniciarManutencao.html"
+                  href="gerenciarAviao.html"
                   class="nav-link align-middle px-0">
                   <i class="fs-4 bi-house"></i>
                   <span class="ms-1 d-none d-sm-inline"
-                    >Iniciar Manutenção</span
-                  >
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="gerenciarManutencao.html"
-                  class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house"></i>
-                  <span class="ms-1 d-none d-sm-inline"
-                    >Gerenciar Manutenção</span
-                  >
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="manutencaoFinalizada.html"
-                  class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house"></i>
-                  <span class="ms-1 d-none d-sm-inline"
-                    >Manutençōes Finalizadas</span
+                    >Listar Funcionários</span
                   >
                 </a>
               </li>
@@ -76,7 +56,7 @@
                   width="30"
                   height="30"
                   class="rounded-circle" />
-                <span class="d-none d-sm-inline mx-1">Pedro</span>
+                <span class="d-none d-sm-inline mx-1">Maria</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                 <li>
@@ -99,7 +79,6 @@
           </div>
         </div>
         <main>
-          <div class="bd-example bg-light">
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -110,7 +89,7 @@
                     data-bs-target="#flush-collapseOne"
                     aria-expanded="false"
                     aria-controls="flush-collapseOne">
-                    Asa
+                    Informações do Funcionário
                   </button>
                 </h2>
                 <div
@@ -121,71 +100,37 @@
                   <div class="accordion-body">
                     <div class="card" style="width: 18rem">
                       <div class="card-body">
-                        <h5 class="card-title">Fuselagem</h5>
-                        <label for="addDataInicio" class="form-label"
-                          >Data de início</label
-                        >
+                        <label class="label" for="addFuncionario">Nome</label>
                         <input
-                          type="date"
+                        placeholder="nome do funcionario"
+                          type="text"
                           class="form-control"
-                          id="addDataInicio"
-                           disabled/>
-                        <label for="addDataInicio" class="form-label"
-                          >Observaçōes</label
-                        >
-                        <textarea
+                          id="addFuncionario" />
+                          <label class="label" for="addFuncionario">CPF</label>
+                          <input
+                          placeholder="cpf do funcionario"
+                            type="number"
+                            class="form-control"
+                            id="addFuncionario" />
+                            <label class="label" for="addFuncionario">Telefone</label>
+                        <input
+                        placeholder="telefone do funcionario"
+                          type="text"
                           class="form-control"
-                          aria-label="With textarea"
-                          ></textarea>
+                          id="addFuncionario" />
+                          <label class="label" for="addFuncionario">E-mail</label>
+                        <input
+                        placeholder="email do funcionario"
+                          type="text"
+                          class="form-control"
+                          id="addFuncionario" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo">
-                    Cabine
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="flush-headingTwo"
-                  data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">
-                    <div class="card" style="width: 18rem">
-                      <div class="card-body">
-                        <h5 class="card-title">Pintura</h5>
-                        <label for="addDataInicio" class="form-label"
-                          >Data de início</label
-                        >
-                        <input
-                          type="date"
-                          class="form-control"
-                          id="addDataInicio"
-                           disabled/>
-                        <label for="addDataInicio" class="form-label"
-                          >Observaçōes</label
-                        >
-                        <textarea
-                          class="form-control"
-                          aria-label="With textarea"
-                          ></textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <input class="btn btn-primary position-absolute bottom-0 end-0" id="submitButton" type="submit" value="Confirmar">
-              </div>
+              <input class="btn btn-primary position-absolute bottom-0 end-0" id="submitButton" type="submit" value="Enviar">
             </div>
-          </div>
         </main>
       </div>
     </div>

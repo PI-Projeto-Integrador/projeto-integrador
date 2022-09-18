@@ -27,6 +27,12 @@
   margin-top: 20px;
 }
 
+#addFuncButton{
+  width: 20%;
+  margin-top: 20px;
+  margin-left: 5%;
+}
+
 #visualizarButton {
   margin-top: 10px;
 }
@@ -54,3 +60,32 @@
   margin: auto;
   margin-bottom: 15px;
 }
+
+.accordion .card  .form-control, .accordion .card  .form-select,.accordion .card  .label { 
+  margin-top: 10px;
+
+}
+#editButton{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#deleteButton{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.form-select{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#addButton{
+  margin: auto;
+  margin-left: 27%;
+}
+
+#submitButton{
+  font-size: 14pt;
+  margin-bottom: 20px;
+  margin-right: 20px;}

@@ -31,31 +31,11 @@
               id="menu">
               <li class="nav-item">
                 <a
-                  href="iniciarManutencao.html"
+                  href="gerenciarAviao.html"
                   class="nav-link align-middle px-0">
                   <i class="fs-4 bi-house"></i>
                   <span class="ms-1 d-none d-sm-inline"
-                    >Iniciar Manutenção</span
-                  >
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="gerenciarManutencao.html"
-                  class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house"></i>
-                  <span class="ms-1 d-none d-sm-inline"
-                    >Gerenciar Manutenção</span
-                  >
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="manutencaoFinalizada.html"
-                  class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house"></i>
-                  <span class="ms-1 d-none d-sm-inline"
-                    >Manutençōes Finalizadas</span
+                    >Listar Aviões</span
                   >
                 </a>
               </li>
@@ -76,7 +56,7 @@
                   width="30"
                   height="30"
                   class="rounded-circle" />
-                <span class="d-none d-sm-inline mx-1">Pedro</span>
+                <span class="d-none d-sm-inline mx-1">Sara</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                 <li>
@@ -110,7 +90,7 @@
                     data-bs-target="#flush-collapseOne"
                     aria-expanded="false"
                     aria-controls="flush-collapseOne">
-                    Asa
+                    Informações Básicas
                   </button>
                 </h2>
                 <div
@@ -121,22 +101,30 @@
                   <div class="accordion-body">
                     <div class="card" style="width: 18rem">
                       <div class="card-body">
-                        <h5 class="card-title">Fuselagem</h5>
-                        <label for="addDataInicio" class="form-label"
-                          >Data de início</label
-                        >
+                        <label class="label" for="addFuncionario">Nome</label>
                         <input
-                          type="date"
+                        placeholder="nome do aviao"
+                          type="text"
                           class="form-control"
-                          id="addDataInicio"
-                           disabled/>
-                        <label for="addDataInicio" class="form-label"
-                          >Observaçōes</label
-                        >
-                        <textarea
+                          id="addFuncionario" />
+                          <label class="label" for="addFuncionario">NCM</label>
+                          <input
+                          placeholder="ncm do aviao"
+                            type="number"
+                            class="form-control"
+                            id="addFuncionario" />
+                            <label class="label" for="addFuncionario">Modelo</label>
+                        <input
+                        placeholder="modelo do aviao"
+                          type="text"
                           class="form-control"
-                          aria-label="With textarea"
-                          ></textarea>
+                          id="addFuncionario" />
+                          <label class="label" for="addFuncionario">Fabricante</label>
+                        <input
+                        placeholder="fabricante do aviao"
+                          type="text"
+                          class="form-control"
+                          id="addFuncionario" />
                       </div>
                     </div>
                   </div>
@@ -151,7 +139,7 @@
                     data-bs-target="#flush-collapseTwo"
                     aria-expanded="false"
                     aria-controls="flush-collapseTwo">
-                    Cabine
+                    Partes do Avião
                   </button>
                 </h2>
                 <div
@@ -162,28 +150,47 @@
                   <div class="accordion-body">
                     <div class="card" style="width: 18rem">
                       <div class="card-body">
-                        <h5 class="card-title">Pintura</h5>
-                        <label for="addDataInicio" class="form-label"
-                          >Data de início</label
-                        >
+                        <label class="label" for="addFuncionario">Nome da Parte</label>
                         <input
-                          type="date"
-                          class="form-control"
-                          id="addDataInicio"
-                           disabled/>
-                        <label for="addDataInicio" class="form-label"
-                          >Observaçōes</label
-                        >
-                        <textarea
+                        placeholder="nome da parte"
+                        type="text"
+                        class="form-control"
+                        id="addFuncionario" />
+                        <label class="label" for="addFuncionario">Tipo da Parte</label>
+                        <div class="mb-3">
+                          <select class="form-select"  required aria-label="select example">
+                            <option value="">Selecione uma opção</option>
+                            <option value="1">Texto</option>
+                            <option value="2">Numero</option>
+                            <option value="3">Data</option>
+                          </select>
+                          <div class="invalid-feedback">Selecione uma Opção</div>
+                        </div>
+                          <label class="label" for="addFuncionario">Descrição</label>
+                          <textarea
+                          placeholder="descricao da parte"
                           class="form-control"
                           aria-label="With textarea"
                           ></textarea>
+                           
                       </div>
                     </div>
+                    <button
+                    id="addButton"
+                    type="button"
+                    href="#"
+                    class="btn btn-outline-primary">
+                    <img
+                    src="../public/img/add--alt.svg"
+                    width="30"
+                    height="30"
+                    class="rounded-circle" />
+                    Adicionar Parte
+                  </button>
                   </div>
                 </div>
-                <input class="btn btn-primary position-absolute bottom-0 end-0" id="submitButton" type="submit" value="Confirmar">
               </div>
+              <input class="btn btn-primary position-absolute bottom-0 end-0" id="submitButton" type="submit" value="Enviar">
             </div>
           </div>
         </main>

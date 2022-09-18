@@ -22,7 +22,7 @@
             class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
             <a
               id="software-name"
-              href="index.html"
+              href="../index.html"
               class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
               <span class="fs-5 d-none d-sm-inline">ACME Manutençōes</span>
             </a>
@@ -35,27 +35,7 @@
                   class="nav-link align-middle px-0">
                   <i class="fs-4 bi-house"></i>
                   <span class="ms-1 d-none d-sm-inline"
-                    >Iniciar Manutenção</span
-                  >
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="gerenciarManutencao.html"
-                  class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house"></i>
-                  <span class="ms-1 d-none d-sm-inline"
-                    >Gerenciar Manutenção</span
-                  >
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href="manutencaoFinalizada.html"
-                  class="nav-link align-middle px-0">
-                  <i class="fs-4 bi-house"></i>
-                  <span class="ms-1 d-none d-sm-inline"
-                    >Manutençōes Finalizadas</span
+                    >Visualizar Manutençōes</span
                   >
                 </a>
               </li>
@@ -76,7 +56,7 @@
                   width="30"
                   height="30"
                   class="rounded-circle" />
-                <span class="d-none d-sm-inline mx-1">Marcio</span>
+                <span class="d-none d-sm-inline mx-1">Pedro</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                 <li>
@@ -98,7 +78,45 @@
             </div>
           </div>
         </div>
-        <main></main>
+        <main>
+          <form class="d-flex" id="searchBar" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Número da Manutenção</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Modelo do Avião</h6>
+              <p id="ncm"><img
+              src="../public/img/plane.svg"
+              width="30"
+              height="30"
+              class="rounded-circle" /> NCM do Avião</p>
+              <h6 class="card-subtitle mb-2 text">Data de Criação: xx/xx/xx xx:xx</h6>
+              <h6 class="card-subtitle mb-2 text">Data Limite: xx/xx/xx</h6>
+              <div>
+              <button id="visualizarButton" type="button" href="visualizarManutencao.html" class="btn btn-outline-primary">Visualizar</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Número da Manutenção</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Modelo do Avião</h6>
+              <p id="ncm"><img
+              src="../public/img/plane.svg"
+              width="30"
+              height="30"
+              class="rounded-circle" /> NCM do Avião</p>
+              <h6 class="card-subtitle mb-2 text">Data de Criação: xx/xx/xx xx:xx</h6>
+              <h6 class="card-subtitle mb-2 text">Data Limite: xx/xx/xx</h6>
+              <div>
+              <button id="visualizarButton" type="button" href="visualizarManutencao.html" class="btn btn-outline-primary">Visualizar</button>
+              </div>
+            </div>
+          </div>
+
+        </main>
       </div>
     </div>
 

@@ -2,8 +2,24 @@
   border-bottom: 1px solid white;
 }
 
-form {
+.iniciarManutencao {
   width: 30%;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: 2px solid #adb5bd;
+  padding: 20px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+}
+
+#inputMsn {
+  padding-bottom: 20px;
+}
+
+.buttons {
+  position: absolute;
+  margin-top: 10px;
+  right: 29.8%;
 }
 
 .card{

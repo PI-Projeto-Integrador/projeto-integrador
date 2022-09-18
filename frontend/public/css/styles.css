@@ -22,27 +22,35 @@
   right: 29.8%;
 }
 
-.card{
+.card {
   width: 30%;
   margin-top: 20px;
 }
 
-#visualizarButton{
+#visualizarButton {
   margin-top: 10px;
 }
-#ncm{
+#ncm {
   margin-top: 10px;
 }
-#ncm img{
+#ncm img {
   margin-right: 5px;
 }
 
-#completeButton{
+#completeButton {
   margin-top: 10px;
   margin-left: 61%;
 }
-#searchBar{
+#searchBar {
   width: 30%;
   margin-top: 10px;
+}
 
+.accordion {
+  width: 30%;
+}
+
+.accordion .card {
+  margin: auto;
+  margin-bottom: 15px;
 }

@@ -75,11 +75,6 @@
   margin-right: 10px;
 }
 
-.form-select{
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
 #addButton{
   margin: auto;
   margin-left: 27%;
@@ -88,4 +83,14 @@
 #submitButton{
   font-size: 14pt;
   margin-bottom: 20px;
-  margin-right: 20px;}
+  margin-right: 20px;
+}
+#formLogin {
+  width: 30%;
+  margin-left: 25%;
+  margin-top: 10%;
+  border: 2px solid #adb5bd;
+  padding: 20px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+}

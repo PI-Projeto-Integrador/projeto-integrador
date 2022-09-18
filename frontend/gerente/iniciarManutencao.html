@@ -95,15 +95,15 @@
                 >Insira o NCM do Avião</label
               >
               <input
-                type="text"
+                type="number"
                 class="form-control"
                 id="exampleFormControlInput1"
-                placeholder="Ex: 30020B.745" />
-                <button id="ncmValidationButton" type="submit" class="btn btn-outline-primary">
+                placeholder="Ex: 33681462" />
+                <button id="ncmValidationButton" type="button" class="btn btn-outline-primary">
                   Enviar
                 </button>
             </div>
-            <div id="formIniciarMan">
+            <div id="formIniciarMan" style="display:none">
               <form>
                 <div class="mb-3">
                   <p>NCM: XXXXXXXXXX</p>
@@ -148,5 +148,20 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"></script>
+      <script>
+      const btn = document.getElementById('ncmValidationButton');
+      btn.addEventListener('click', () => {
+      const form = document.getElementById('formIniciarMan');
+      const ncmInput = document.getElementById('exampleFormControlInput1');
+  if (ncmInput.value === '12345') {
+    // 👇️ this SHOWS the form
+    form.style.display = 'block';
+  } else {
+    // 👇️ this HIDES the form
+    form.style.display = 'none';
+  }
+});
+        </script>
   </body>
+
 </html>

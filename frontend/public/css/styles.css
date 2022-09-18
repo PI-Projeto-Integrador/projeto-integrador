@@ -5,7 +5,7 @@
 .iniciarManutencao {
   width: 30%;
   margin-left: 25%;
-  margin-top: 10%;
+  margin-top: 5%;
   border: 2px solid #adb5bd;
   padding: 20px;
   padding-bottom: 70px;
@@ -33,12 +33,6 @@
   margin-left: 5%;
 }
 
-#visualizarButton {
-  margin-top: 10px;
-}
-#ncm {
-  margin-top: 10px;
-}
 #ncm img {
   margin-right: 5px;
 }
@@ -60,8 +54,11 @@
   margin: auto;
   margin-bottom: 15px;
 }
+#ncmValidationButton{
+margin-left: 82%;
 
-.accordion .card  .form-control, .accordion .card  .form-select,.accordion .card  .label { 
+}
+#ncm,#visualizarButton,#ncmValidationButton,.accordion .card  .form-control, .accordion .card  .form-select,.accordion .card  .label { 
   margin-top: 10px;
 
 }

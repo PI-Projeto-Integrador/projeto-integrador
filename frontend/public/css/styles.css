@@ -27,7 +27,7 @@
   margin-top: 20px;
 }
 
-#addFuncButton{
+#addFuncButton {
   width: 20%;
   margin-top: 20px;
   margin-left: 5%;
@@ -54,30 +54,33 @@
   margin: auto;
   margin-bottom: 15px;
 }
-#ncmValidationButton{
-margin-left: 82%;
-
+#ncmValidationButton {
+  margin-left: 82%;
 }
-#ncm,#visualizarButton,#ncmValidationButton,.accordion .card  .form-control, .accordion .card  .form-select,.accordion .card  .label { 
+#ncm,
+#visualizarButton,
+#ncmValidationButton,
+.accordion .card .form-control,
+.accordion .card .form-select,
+.accordion .card .label {
   margin-top: 10px;
-
 }
-#editButton{
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-#deleteButton{
+#editButton {
   margin-top: 10px;
   margin-right: 10px;
 }
 
-#addButton{
+#deleteButton {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+#addButton {
   margin: auto;
   margin-left: 27%;
 }
 
-#submitButton{
+#submitButton {
   font-size: 14pt;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -91,6 +94,6 @@ margin-left: 82%;
   padding-bottom: 70px;
   border-radius: 10px;
 }
-#esqueci{
+#esqueci {
   margin-left: 30%;
 }

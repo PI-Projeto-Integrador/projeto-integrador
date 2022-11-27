@@ -1,4 +1,5 @@
 const Funcionario = require('../models/Funcionario');
+const Logradouro = require('../models/Logradouro');
 
 const insertFuncionario = async (payload) => {
   try {
@@ -18,8 +19,11 @@ const selectFuncionario = async () => {
 };
 const selectFuncionarioById = async (payload) => {
   try {
-    const results = await Funcionario.selectFuncionarioById(payload);
-    return results;
+    const resultsFuncionario = await Funcionario.selectFuncionarioById(payload);
+    const resultsLogradouro = await Logradouro.selectLogradouroById(
+      resultsFuncionario[0].idLogradouroFK
+    );
+    return { data: { resultsFuncionario, resultsLogradouro } };
   } catch (err) {
     console.error(err);
   }

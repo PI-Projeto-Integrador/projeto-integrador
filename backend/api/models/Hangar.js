@@ -21,8 +21,8 @@ const selectHangar = () => {
 const selectHangarById = (payload) => {
   return new Promise((resolve, reject) => {
     const quertString = `SELECT * FROM hangar WHERE idHangarPK = ${payload}`;
-    conn.query(quertString, () => {
-      err ? reject(console.error(err)) : resolve('Successfully selected');
+    conn.query(quertString, (err, data) => {
+      err ? reject(console.error(err)) : resolve(data);
     });
   });
 };

@@ -1,4 +1,6 @@
 const Aviao = require('../models/Aviao');
+const controllerHangar = require('../controllers/controllerHangar');
+const controllerTipoParte = require('../controllers/controllerTipoParte');
 
 const insertAviao = async (payload) => {
   try {
@@ -18,8 +20,18 @@ const selectAviao = async () => {
 };
 const selectAviaoById = async (payload) => {
   try {
-    const results = await Aviao.selectAviaoById(payload);
-    return results;
+    const resultsAviao = await Aviao.selectAviaoById(payload);
+    const resultsHangar = await controllerHangar.selectHangarById(
+      resultsAviao[0].idHangarFK
+    );
+    const resultsTipoParte = await controllerTipoParte.selectTipoParteById(
+      resultsAviao[0].idTipoParteFK
+    );
+    console.log(resultsAviao);
+    console.log(resultsHangar);
+    return {
+      data: { resultsAviao, resultsHangar, resultsTipoParte },
+    };
   } catch (err) {
     console.error(err);
   }

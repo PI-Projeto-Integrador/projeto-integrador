@@ -3,7 +3,7 @@ const conn = require('../config/mysqlConnection');
 const insertParte = (payload) => {
   return new Promise((resolve, reject) => {
     const quertString = `INSERT INTO parte (idPartePK, descricaoParte) VALUES (${payload.idPartePK}, ${payload.descricaoParte}`;
-    conn.query(quertString, () => {
+    conn.query(quertString, (err) => {
       err ? reject(console.error(err)) : resolve('Successfully inserted');
     });
   });
@@ -12,8 +12,8 @@ const insertParte = (payload) => {
 const selectParte = () => {
   return new Promise((resolve, reject) => {
     const quertString = `SELECT * FROM parte`;
-    conn.query(quertString, () => {
-      err ? reject(console.error(err)) : resolve('Successfully selected');
+    conn.query(quertString, (err, data) => {
+      err ? reject(console.error(err)) : resolve(data);
     });
   });
 };
@@ -21,15 +21,15 @@ const selectParte = () => {
 const selectParteById = (payload) => {
   return new Promise((resolve, reject) => {
     const quertString = `SELECT * FROM parte WHERE idPartePK = ${payload}`;
-    conn.query(quertString, () => {
-      err ? reject(console.error(err)) : resolve('Successfully selected');
+    conn.query(quertString, (err, data) => {
+      err ? reject(console.error(err)) : resolve(data);
     });
   });
 };
 const updateParte = (payload) => {
   return new Promise((resolve, reject) => {
     const quertString = `UPDATE parte SET idPartePK = ${payload.idPartePK}, descricaoParte = ${payload.descricaoParte}`;
-    conn.query(quertString, () => {
+    conn.query(quertString, (err) => {
       err ? reject(console.error(err)) : resolve('Successfully updated');
     });
   });
@@ -37,7 +37,7 @@ const updateParte = (payload) => {
 const deleteParte = (payload) => {
   return new Promise((resolve, reject) => {
     const quertString = `DELETE FROM parte WHERE idPartePK = ${payload}`;
-    conn.query(quertString, () => {
+    conn.query(quertString, (err) => {
       err ? reject(console.error(err)) : resolve('Successfully deleted');
     });
   });

@@ -5,7 +5,7 @@ const controllerTipoParte = require('../controllers/controllerTipoParte');
 const insertAviao = async (payload) => {
   try {
     const results = await Aviao.insertAviao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -13,11 +13,12 @@ const insertAviao = async (payload) => {
 const selectAviao = async () => {
   try {
     const results = await Aviao.selectAviao();
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
 };
+
 const selectAviaoById = async (payload) => {
   try {
     const resultsAviao = await Aviao.selectAviaoById(payload);
@@ -30,6 +31,7 @@ const selectAviaoById = async (payload) => {
     console.log(resultsAviao);
     console.log(resultsHangar);
     return {
+      status: 200,
       data: { resultsAviao, resultsHangar, resultsTipoParte },
     };
   } catch (err) {
@@ -39,7 +41,7 @@ const selectAviaoById = async (payload) => {
 const updateAviao = async (payload) => {
   try {
     const results = await Aviao.updateAviao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -47,7 +49,7 @@ const updateAviao = async (payload) => {
 const deleteAviao = async (payload) => {
   try {
     const results = await Aviao.deleteAviao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }

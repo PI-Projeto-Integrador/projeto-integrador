@@ -2,7 +2,7 @@ const conn = require('../config/mysqlConnection');
 
 const insertParte = (payload) => {
   return new Promise((resolve, reject) => {
-    const quertString = `INSERT INTO parte (idPartePK, descricaoParte) VALUES (${payload.idPartePK}, ${payload.descricaoParte}`;
+    const quertString = `INSERT INTO parte (idPartePK, descricaoParte, idTipoParteFK) VALUES (${payload.idPartePK}, ${payload.descricaoParte}, ${payload.idTipoParteFK}`;
     conn.query(quertString, (err) => {
       err ? reject(console.error(err)) : resolve('Successfully inserted');
     });
@@ -28,7 +28,7 @@ const selectParteById = (payload) => {
 };
 const updateParte = (payload) => {
   return new Promise((resolve, reject) => {
-    const quertString = `UPDATE parte SET idPartePK = ${payload.idPartePK}, descricaoParte = ${payload.descricaoParte}`;
+    const quertString = `UPDATE parte SET idPartePK = ${payload.idPartePK}, descricaoParte = ${payload.descricaoParte}, idTipoParteFK = ${payload.idTipoParteFK}`;
     conn.query(quertString, (err) => {
       err ? reject(console.error(err)) : resolve('Successfully updated');
     });

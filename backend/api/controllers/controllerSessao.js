@@ -3,7 +3,7 @@ const Sessao = require('../models/Sessao');
 const insertSessao = async (payload) => {
   try {
     const results = await Sessao.insertSessao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -11,7 +11,7 @@ const insertSessao = async (payload) => {
 const selectSessao = async () => {
   try {
     const results = await Sessao.selectSessao();
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -19,7 +19,7 @@ const selectSessao = async () => {
 const selectSessaoById = async (payload) => {
   try {
     const results = await Sessao.selectSessaoById(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -27,7 +27,7 @@ const selectSessaoById = async (payload) => {
 const updateSessao = async (payload) => {
   try {
     const results = await Sessao.updateSessao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -35,7 +35,7 @@ const updateSessao = async (payload) => {
 const deleteSessao = async (payload) => {
   try {
     const results = await Sessao.deleteSessao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }

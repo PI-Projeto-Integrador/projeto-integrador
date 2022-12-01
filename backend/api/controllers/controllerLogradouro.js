@@ -3,7 +3,7 @@ const Logradouro = require('../models/Logradouro');
 const insertLogradouro = async (payload) => {
   try {
     const results = await Logradouro.insertLogradouro(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -11,7 +11,7 @@ const insertLogradouro = async (payload) => {
 const selectLogradouro = async () => {
   try {
     const results = await Logradouro.selectLogradouro();
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -19,7 +19,7 @@ const selectLogradouro = async () => {
 const selectLogradouroById = async (payload) => {
   try {
     const results = await Logradouro.selectLogradouroById(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -27,7 +27,7 @@ const selectLogradouroById = async (payload) => {
 const updateLogradouro = async (payload) => {
   try {
     const results = await Logradouro.updateLogradouro(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -35,7 +35,7 @@ const updateLogradouro = async (payload) => {
 const deleteLogradouro = async (payload) => {
   try {
     const results = await Logradouro.deleteLogradouro(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }

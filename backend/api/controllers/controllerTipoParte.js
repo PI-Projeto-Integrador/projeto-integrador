@@ -5,7 +5,7 @@ const controllerSessao = require('../controllers/controllerSessao');
 const insertTipoParte = async (payload) => {
   try {
     const results = await TipoParte.insertTipoParte(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -13,7 +13,7 @@ const insertTipoParte = async (payload) => {
 const selectTipoParte = async () => {
   try {
     const results = await TipoParte.selectTipoParte();
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -35,7 +35,7 @@ const selectTipoParteById = async (payload) => {
 const updateTipoParte = async (payload) => {
   try {
     const results = await TipoParte.updateTipoParte(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }

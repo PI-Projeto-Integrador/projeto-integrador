@@ -2,7 +2,7 @@ const conn = require('../config/mysqlConnection');
 
 const insertFuncionario = (payload) => {
   return new Promise((resolve, reject) => {
-    const quertString = `INSERT INTO funcionario (idLogradouroFK, nomeFuncionario, cpfFuncionario, dataNascimentoFuncionario, telefoneFuncionario, loginFuncionario, senhaFuncionario, tipo) VALUES (${payload.idLogradouroFK}, ${payload.nomeFuncionario}, ${payload.cpfFuncionario}, ${payload.dataNascimentoFuncionario}, ${payload.telefoneFuncionario}, ${payload.loginFuncionario}, ${payload.senhaFuncionario}, ${payload.tipo})`;
+    const quertString = `INSERT INTO funcionario (idLogradouroFK, nomeFuncionario, cpfFuncionario, dataNascimentoFuncionario, telefoneFuncionario, loginFuncionario, senhaFuncionario, cargo) VALUES (${payload.idLogradouroFK}, ${payload.nomeFuncionario}, ${payload.cpfFuncionario}, ${payload.dataNascimentoFuncionario}, ${payload.telefoneFuncionario}, ${payload.loginFuncionario}, ${payload.senhaFuncionario}, ${payload.cargo})`;
     conn.query(quertString, (err) => {
       err ? reject(console.error(err)) : resolve('Successfully inserted');
     });
@@ -29,7 +29,7 @@ const selectFuncionarioById = (payload) => {
 
 const updateFuncionario = (payload) => {
   return new Promise((resolve, reject) => {
-    const quertString = `UPDATE funcionario SET idFuncionarioPK = ${payload.idFuncionarioPK}, idPessoaFK = ${payload.idPessoaFK}, idLogradouroFK = ${payload.idLogradouroFK}, nomeFuncionario = ${payload.nomeFuncionario}, cpfFuncionario = ${payload.cpfFuncionario}, dataNascimentoFuncionario = ${payload.dataNascimentoFuncionario}, telefoneFuncionario = ${payload.telefoneFuncionario}, loginFuncionario = ${payload.loginFuncionario}, senhaFuncionario = ${payload.senhaFuncionario}, tipo = ${payload.tipo}`;
+    const quertString = `UPDATE funcionario SET idFuncionarioPK = ${payload.idFuncionarioPK}, idPessoaFK = ${payload.idPessoaFK}, idLogradouroFK = ${payload.idLogradouroFK}, nomeFuncionario = ${payload.nomeFuncionario}, cpfFuncionario = ${payload.cpfFuncionario}, dataNascimentoFuncionario = ${payload.dataNascimentoFuncionario}, telefoneFuncionario = ${payload.telefoneFuncionario}, loginFuncionario = ${payload.loginFuncionario}, senhaFuncionario = ${payload.senhaFuncionario}, cargo = ${payload.cargo}`;
     conn.query(quertString, (err) => {
       err ? reject(console.error(err)) : resolve('Successfully updated');
     });

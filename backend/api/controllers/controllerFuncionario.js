@@ -4,7 +4,7 @@ const Logradouro = require('../models/Logradouro');
 const insertFuncionario = async (payload) => {
   try {
     const results = await Funcionario.insertFuncionario(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -12,7 +12,7 @@ const insertFuncionario = async (payload) => {
 const selectFuncionario = async () => {
   try {
     const results = await Funcionario.selectFuncionario();
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -31,7 +31,7 @@ const selectFuncionarioById = async (payload) => {
 const updateFuncionario = async (payload) => {
   try {
     const results = await Funcionario.updateFuncionario(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -39,7 +39,7 @@ const updateFuncionario = async (payload) => {
 const deleteFuncionario = async (payload) => {
   try {
     const results = await Funcionario.deleteFuncionario(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }

@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const controllerAviao = require('../controllers/controllerAviaoIcaro');
+const controllerAviao = require('../controllers/controllerAviao');
 
 router.post('/criar', async (req, res) => {
   try {
@@ -16,7 +16,7 @@ router.post('/criar', async (req, res) => {
 router.get('/buscar', async (req, res) => {
   try {
     const results = await controllerAviao.selectAviao();
-    res.status(results.status).send(results.data);
+    res.status(200).send(results.data);
   } catch (err) {
     console.error(err);
   }

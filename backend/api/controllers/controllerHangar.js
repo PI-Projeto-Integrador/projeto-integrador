@@ -5,7 +5,7 @@ const controllerFuncionario = require('../controllers/controllerFuncionario');
 const insertHangar = async (payload) => {
   try {
     const results = await Hangar.insertHangar(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -13,7 +13,7 @@ const insertHangar = async (payload) => {
 const selectHangar = async () => {
   try {
     const results = await Hangar.selectHangar();
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -35,7 +35,7 @@ const selectHangarById = async (payload) => {
 const updateHangar = async (payload) => {
   try {
     const results = await Hangar.updateHangar(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -43,7 +43,7 @@ const updateHangar = async (payload) => {
 const deleteHangar = async (payload) => {
   try {
     const results = await Hangar.deleteHangar(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }

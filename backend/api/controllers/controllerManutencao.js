@@ -3,7 +3,7 @@ const Manutencao = require('../models/Manutencao');
 const insertManutencao = async (payload) => {
   try {
     const results = await Manutencao.insertManutencao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -11,7 +11,7 @@ const insertManutencao = async (payload) => {
 const selectManutencao = async () => {
   try {
     const results = await Manutencao.selectManutencao();
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -19,7 +19,7 @@ const selectManutencao = async () => {
 const selectManutencaoById = async (payload) => {
   try {
     const results = await Manutencao.selectManutencaoById(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -27,7 +27,7 @@ const selectManutencaoById = async (payload) => {
 const updateManutencao = async (payload) => {
   try {
     const results = await Manutencao.updateManutencao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }
@@ -35,7 +35,7 @@ const updateManutencao = async (payload) => {
 const deleteManutencao = async (payload) => {
   try {
     const results = await Manutencao.deleteManutencao(payload);
-    return results;
+    return { status: 200, data: results };
   } catch (err) {
     console.error(err);
   }

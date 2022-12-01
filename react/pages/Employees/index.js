@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   KeyboardView,
   Title,
@@ -6,15 +6,15 @@ import {
   Input,
   ButtonSubmit,
   TextButton,
-} from "./styles";
-import { useNavigation, CommonActions } from "@react-navigation/core";
+} from './styles';
+import { useNavigation, CommonActions } from '@react-navigation/core';
 
 function RegisterEmployees() {
   const navigation = useNavigation();
   const TelaCadastrarFuncionario = () => {
     navigation.dispatch(
       CommonActions.navigate({
-        name: "RegisterEmp",
+        name: 'RegisterEmp',
       })
     );
   };

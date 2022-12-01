@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 import {
   KeyboardView,
@@ -7,7 +7,10 @@ import {
   Input,
   ButtonSubmit,
   TextButton,
-} from "./styles";
+} from './styles';
+
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../../config/firebase.js';
 
 function RegisterEmployees() {
   const [nome, setNome] = useState(nome);
@@ -30,11 +33,19 @@ function RegisterEmployees() {
     idLogradouroFK: parseInt(idlogradouro),
   };
 
-  const clickHandler = () => {
-    console.log(payload);
-    fetch("https://localhost:3000/aviao/criar", {
-      body: payload,
-    });
+  async function adicionarAeronave() {
+    try {
+      // aqui é atribuido a função addDoc (cuja função é adicionar um documento no firebase) a constante docRef
+      // os parâmetros são a ligação pro firestore ( getFirestore()) e a collection que o documento será adicionado
+      const docRef = await addDoc(collection(db, 'colecaoTeste'), payload);
+      console.log('Documento adicionado com sucesso! ID: ', docRef.id);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  const clickHandler = async () => {
+    adicionarAeronave();
   };
 
   return (

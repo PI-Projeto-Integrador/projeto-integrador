@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const controllerFuncionario = require('../controllers/controllerFuncionarioIcaro');
+const controllerFuncionario = require('../controllers/controllerFuncionario');
 
 router.post('/criar/', async (req, res) => {
   try {

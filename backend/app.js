@@ -1,4 +1,6 @@
 require('dotenv').config();
+const https = require('https');
+const fs = require('fs');
 
 const express = require('express');
 const cors = require('cors');
@@ -18,6 +20,6 @@ app.get('/live', (req, res) => res.status(200).send({ status: 'ok' }));
 
 app.use('/aviao', routesAviao);
 
-app.listen(port, async () => {
-  console.log(`Running service on port ${port}`);
+https.createServer(app).listen(port, () => {
+  console.log(`server is runing at port ${port}`);
 });

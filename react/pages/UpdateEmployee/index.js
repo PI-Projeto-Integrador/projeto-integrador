@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import React, { useState, useContext, useEffect } from 'react';
+import { EmployeeContext } from '../../context/EmployeeContext';
 import {
   KeyboardView,
   Title,
@@ -9,9 +9,9 @@ import {
   TextButton,
 } from './styles';
 
-import { addDocument } from '../../queries/addDocument.js';
+function UpdateEmployees() {
+  const employeeCtx = useContext(EmployeeContext);
 
-function RegisterEmployees() {
   const [nome, setNome] = useState(nome);
   const [cpf, setCpf] = useState(cpf);
   const [data, setData] = useState(data);
@@ -19,6 +19,17 @@ function RegisterEmployees() {
   const [login, setLogin] = useState(login);
   const [senha, setSenha] = useState(senha);
   const [cargo, setCargo] = useState(cargo);
+  const [idlogradouro, setIdlogradouro] = useState(idlogradouro);
+  useEffect(() => {
+    setNome(employeeCtx.employee.nome);
+    setCpf(employeeCtx.employee.cpf);
+    setData(employeeCtx.employee.data);
+    setTelefone(employeeCtx.employee.telefone);
+    setLogin(employeeCtx.employee.login);
+    setSenha(employeeCtx.employee.senha);
+    setCargo(employeeCtx.employee.cargo);
+    setLogin(employeeCtx.employee.login);
+  }, []);
 
   const payload = {
     nomeFuncionario: nome,
@@ -30,14 +41,12 @@ function RegisterEmployees() {
     cargo: cargo,
   };
 
-  const clickHandler = () => {
-    addDocument('funcionario', payload);
-  };
+  const clickHandler = () => {};
 
   return (
     <KeyboardView>
       <Container>
-        <Title>Cadastrar Funcionário</Title>
+        <Title>Atualizar Funcionário</Title>
         <Input
           placeholderTextColor="#fff"
           placeholder="Nome"
@@ -76,16 +85,17 @@ function RegisterEmployees() {
         />
         <Input
           placeholderTextColor="#fff"
-          placeholder="Cargo"
+          placeholder="cargo"
           value={cargo}
           onChangeText={(texto) => setCargo(texto)}
         />
+
         <ButtonSubmit onPress={clickHandler}>
-          <TextButton>Cadastrar</TextButton>
+          <TextButton>Atualizar</TextButton>
         </ButtonSubmit>
       </Container>
     </KeyboardView>
   );
 }
 
-export default RegisterEmployees;
+export default UpdateEmployees;

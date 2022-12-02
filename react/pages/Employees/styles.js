@@ -5,7 +5,7 @@ export const KeyboardView = styled.KeyboardAvoidingView`
 
   align-items: center;
   justify-content: center;
-  background-color: rgba(2, 0, 36, 1);
+  background-color: #133379;
 `;
 
 export const Container = styled.View`
@@ -21,8 +21,9 @@ export const Title = styled.Text`
   color: #fff;
   font-size: 26px;
   font-weight: 700;
-  margin-bottom: 60px;
-  bottom: 270px;
+  margin-bottom: 0px;
+  bottom: 720px;
+  position: absolute;
 `;
 
 export const Input = styled.TextInput`
@@ -36,16 +37,50 @@ export const Input = styled.TextInput`
 `;
 
 export const ButtonSubmit = styled.TouchableOpacity`
-  background-color: #a287f4;
+  background-color: #5a86fd;
   border-radius: 9px;
   width: 90%;
   padding: 15px;
   align-items: center;
-  top: 250px;
+  top: 650px;
+  position: absolute;
+  border: solid 7px;
+  border-color: #133379;
 `;
-
+export const DeleteButton = styled.TouchableOpacity`
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 15%;
+`;
+export const UpdateButton = styled.TouchableOpacity`
+  align-items: center;
+  width: 20%;
+  margin-top: 10px;
+  margin-left: 40px;
+`;
 export const TextButton = styled.Text`
   color: #fff;
   font-size: 20px;
   font-weight: bold;
+`;
+export const TextMap = styled.Text`
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+`;
+export const Back = styled.View`
+  background-color: #5a86fd;
+  border-radius: 10px;
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 25px;
+  align-items: center;
+`;
+
+export const Scroll = styled.ScrollView`
+  width: 110%;
+  margin-top: 40px;
+  height: 40%;
+  margin-left: 160px;
 `;

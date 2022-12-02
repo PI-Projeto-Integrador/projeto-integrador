@@ -1,5 +1,4 @@
 import styled from "styled-components/native";
-
 export const KeyboardView = styled.KeyboardAvoidingView`
   flex: 1;
 
@@ -45,6 +44,12 @@ export const ButtonSubmit = styled.TouchableOpacity`
   top: 650px;
   position: absolute;
 `;
+
+export const TextButton = styled.Text`
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+`;
 export const DeleteButton = styled.TouchableOpacity`
   align-items: center;
   border-radius: 10px;
@@ -57,11 +62,6 @@ export const UpdateButton = styled.TouchableOpacity`
   margin-top: 10px;
   margin-left: 40px;
 `;
-export const TextButton = styled.Text`
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-`;
 export const TextMap = styled.Text`
   color: #fff;
   font-size: 20px;
@@ -69,10 +69,10 @@ export const TextMap = styled.Text`
 `;
 export const Back = styled.View`
   background-color: #5a86fd;
-  border-radius: 10px;
+  border-radius: 1px;
   width: 60%;
-  padding: 10px;
-  margin-bottom: 25px;
+  padding: 5px;
+  margin-bottom: 10px;
   align-items: center;
 `;
 
@@ -81,4 +81,23 @@ export const Scroll = styled.ScrollView`
   margin-top: 40px;
   height: 40%;
   margin-left: 160px;
+`;
+export const InputReport = styled.TextInput`
+  border: 2px solid #fff;
+  padding: 15px 15px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 9px;
+  width: 90%;
+  height: 200px;
+  top: 50px;
+  text-align-vertical: top;
+  borderwidth: 1;
+`;
+export const TextReport = styled.Text`
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  bottom: 140px;
+  margin-bottom: 10px;
 `;

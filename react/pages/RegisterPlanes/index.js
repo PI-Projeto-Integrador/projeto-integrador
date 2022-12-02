@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 
 import {
   KeyboardView,
@@ -7,11 +7,23 @@ import {
   Input,
   ButtonSubmit,
   TextButton,
-} from "./styles";
+} from './styles';
+
+import { addDocument } from '../../queries/addDocument.js';
 
 function RegisterPlanes() {
   const [msn, setMsn] = useState(msn);
   const [modelo, setModelo] = useState(modelo);
+
+  const payload = {
+    msn: msn,
+    modelo: modelo,
+  };
+
+  const clickHandler = () => {
+    addDocument('aviao', payload);
+  };
+
   return (
     <KeyboardView>
       <Container>
@@ -29,7 +41,7 @@ function RegisterPlanes() {
           onChangeText={(texto) => setModelo(texto)}
         />
 
-        <ButtonSubmit>
+        <ButtonSubmit onPress={clickHandler}>
           <TextButton>Cadastrar</TextButton>
         </ButtonSubmit>
       </Container>

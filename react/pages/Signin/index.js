@@ -36,6 +36,20 @@ function Signin() {
       })
     );
   };
+  const TelaGerente = () => {
+    navigation.dispatch(
+      CommonActions.navigate({
+        name: "Manager",
+      })
+    );
+  };
+  const TelaTecnico = () => {
+    navigation.dispatch(
+      CommonActions.navigate({
+        name: "Technician",
+      })
+    );
+  };
   //validar usuario
   const clickHandler = () => {
     if (input == mock.user && senha == mock.senha) {
@@ -44,6 +58,12 @@ function Signin() {
     } else if (input == mock_2.user && senha == mock_2.senha) {
       console.log("Login efetuado na conta Gerente de Hangar");
       TelaGerenteDeHangar();
+    } else if (input == mock_3.user && senha == mock_3.senha) {
+      console.log("Login efetuado na conta Gerente");
+      TelaGerente();
+    } else if (input == mock_4.user && senha == mock_4.senha) {
+      console.log("Login efetuado na conta Tecnico");
+      TelaTecnico();
     } else Alert.alert("Login ou senha invalidos");
   };
   //pegar dados

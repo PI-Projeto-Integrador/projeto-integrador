@@ -45,6 +45,18 @@ export const ButtonSubmit = styled.TouchableOpacity`
   top: 650px;
   position: absolute;
 `;
+
+export const TextButton = styled.Text`
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+`;
+export const TextMap = styled.Text`
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+`;
+
 export const DeleteButton = styled.TouchableOpacity`
   align-items: center;
   border-radius: 10px;
@@ -56,16 +68,6 @@ export const UpdateButton = styled.TouchableOpacity`
   width: 20%;
   margin-top: 10px;
   margin-left: 40px;
-`;
-export const TextButton = styled.Text`
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-`;
-export const TextMap = styled.Text`
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
 `;
 export const Back = styled.View`
   background-color: #5a86fd;
@@ -80,5 +82,5 @@ export const Scroll = styled.ScrollView`
   width: 110%;
   margin-top: 40px;
   height: 40%;
-  margin-left: 160px;
+  margin-left: 140px;
 `;
